@@ -1,0 +1,26 @@
+name: publish
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    permissions:
+      contents: write
+
+    steps:
+    - uses: actions/checkout@v6
+
+    - uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: '10.0.x'
+
+    - run: dotnet publish HoYoDL -p:DebugType=none -p:RuntimeIdentifier=win-x64 --framework net10.0
+
+    - uses: softprops/action-gh-release@v3
+      with:
+        name: HoYoDL
+        overwrite_files: true
+        files: HoYoDL/bin/Release/net10.0/win-x64/publish/HoYoDL.exe

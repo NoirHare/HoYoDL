@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="HoYoDL.Api/HoYoDL.Api.csproj" />
+  <Project Path="HoYoDL/HoYoDL.csproj" />
+</Solution>
