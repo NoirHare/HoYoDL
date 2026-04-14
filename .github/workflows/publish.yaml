@@ -22,5 +22,6 @@ jobs:
     - uses: softprops/action-gh-release@v3
       with:
         name: HoYoDL
+        tag_name: Release
         overwrite_files: true
         files: HoYoDL/bin/Release/net10.0/win-x64/publish/HoYoDL.exe
