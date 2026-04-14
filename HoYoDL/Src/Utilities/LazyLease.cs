@@ -1,3 +1,6 @@
+using System;
+using System.Threading;
+
 namespace HoYoDL.Utilities;
 
 public sealed class LazyLease<T>(Func<T> factory, int count) where T : IDisposable {

@@ -1,4 +1,7 @@
-﻿using HoYoDL.Handlers;
+﻿using System;
+using System.Threading.Tasks;
+
+using HoYoDL.Handlers;
 
 using Umrab.Options;
 

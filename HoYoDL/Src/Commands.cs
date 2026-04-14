@@ -1,3 +1,5 @@
+using System;
+
 using HoYoDL.Api;
 
 using Umrab.Options;
@@ -121,6 +123,7 @@ public static class Commands {
           -p, --predownload             Download predownload version if available
           -c, --cache <path>            Cache directory for downloaded chunks
           -m, --merge                   Merge chunks to target directory after download
+          -d, --delete                  Delete cache after merging
         """);
 
     private static bool BoolOptionsConverter(ReadOnlySpan<char> value, bool previous) => true;
